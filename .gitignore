@@ -36,5 +36,4 @@ override.tf.json
 .terraformrc
 terraform.rc
 *.tfstate
-*.pem
 .terraform.lock.hcl
