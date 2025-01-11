@@ -61,10 +61,10 @@ resource "aws_security_group" "devops-sg" {
 }
 
 resource "aws_instance" "Server" {
-  instance_type   = var.instance_type
-  ami             = var.ami
+  instance_type          = var.instance_type
+  ami                    = var.ami
   vpc_security_group_ids = [aws_security_group.devops-sg.id] # Use vpc_security_group_ids
-  key_name        = var.key_name
+  key_name               = var.key_name
   root_block_device {
     volume_size = 20
   }
@@ -130,10 +130,10 @@ resource "aws_instance" "Server" {
   }
 }
 resource "aws_instance" "Jenkins" {
-  instance_type   = var.instance_type
-  ami             = var.ami
+  instance_type          = var.instance_type
+  ami                    = var.ami
   vpc_security_group_ids = [aws_security_group.devops-sg.id] # Use vpc_security_group_ids
-  key_name        = var.key_name
+  key_name               = var.key_name
   root_block_device {
     volume_size = 20
   }
@@ -176,10 +176,10 @@ resource "aws_instance" "Jenkins" {
   }
 }
 resource "aws_instance" "SonarQube" {
-  instance_type   = var.instance_type
-  ami             = var.ami
+  instance_type          = var.instance_type
+  ami                    = var.ami
   vpc_security_group_ids = [aws_security_group.devops-sg.id] # Use vpc_security_group_ids
-  key_name        = var.key_name
+  key_name               = var.key_name
   root_block_device {
     volume_size = 20
   }
@@ -220,10 +220,10 @@ resource "aws_instance" "SonarQube" {
   }
 }
 resource "aws_instance" "Nexus" {
-  instance_type   = var.instance_type
-  ami             = var.ami
+  instance_type          = var.instance_type
+  ami                    = var.ami
   vpc_security_group_ids = [aws_security_group.devops-sg.id]
-  key_name        = var.key_name
+  key_name               = var.key_name
   root_block_device {
     volume_size = 20
   }
