@@ -196,8 +196,6 @@ resource "aws_instance" "SonarQube" {
     }
 
     inline = [
-      "sudo apt-get update -y",
-
       # Install Docker
       # Ref: https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
       "sudo apt-get update -y",
