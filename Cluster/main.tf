@@ -1,6 +1,6 @@
 provider "aws" {
   region = "us-east-1"
-  profile = "noori"
+  profile = "khalid"
 }
 
 resource "aws_vpc" "devopsshack_vpc" {
